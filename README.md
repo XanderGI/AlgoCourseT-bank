@@ -1,1 +1,1 @@
-# AlgoCourse-T-bank
+# AlgoCourse T-bank
