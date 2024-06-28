@@ -17,7 +17,6 @@
   <ul>
     <li><a href="./presentations/24_02_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw2/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw2/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -26,7 +25,6 @@
   <ul>
     <li><a href="./presentations/02_03_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw3/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw3/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -35,7 +33,6 @@
   <ul>
     <li><a href="./presentations/09_03_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw4/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw4/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -44,7 +41,6 @@
   <ul>
     <li><a href="./presentations/16_03_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw5/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw5/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -53,7 +49,6 @@
   <ul>
     <li><a href="./presentations/23_03_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw6/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw6/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -62,7 +57,6 @@
   <ul>
     <li><a href="./presentations/30_03_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw7/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw7/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -71,7 +65,6 @@
   <ul>
     <li><a href="./presentations/06_04_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw8/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw8/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -80,7 +73,6 @@
   <ul>
     <li><a href="./presentations/13_04_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw9/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw9/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -89,7 +81,6 @@
   <ul>
     <li><a href="./presentations/20_04_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw10/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw10/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -98,7 +89,6 @@
   <ul>
     <li><a href="./presentations/27_04_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw11/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw11/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -107,7 +97,6 @@
   <ul>
     <li><a href="./presentations/09_05_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw12/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw12/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -116,7 +105,6 @@
   <ul>
     <li><a href="./presentations/11_05_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw13/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw13/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
@@ -125,7 +113,6 @@
   <ul>
     <li><a href="./presentations/18_05_2024.pptx">Презентация</a></li>
     <li><a href="./homework/hw14/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw14/solutions/">Решения задач</a></li>
   </ul>
 </details>
 
