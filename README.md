@@ -15,7 +15,7 @@
 <details>
   <summary>Базовые структуры данных</summary>
   <ul>
-    <li><a href="https://github.com/XanderGI/AlgoCourseT-bank/blob/Add-all-tasks/Presentations/1%20%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%2C%20%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8%2C%20%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%BE%D0%B8%D1%81%D0%BA.pdf">Презентация</a></li>
+    <li><a href="./Presentations/2%20Базовые%20структуры%20данных(Stack%2CDeck%2CDeque).pdf">Презентация</a></li>
     <li><a href="./homework/hw2/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -23,7 +23,7 @@
 <details>
   <summary>Деревья</summary>
   <ul>
-    <li><a href="./presentations/02_03_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/3%20Деревья(BST%2CAVL%2Ctreap).pdf">Презентация</a></li>
     <li><a href="./homework/hw3/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -31,7 +31,7 @@
 <details>
   <summary>Методы решения задач 1</summary>
   <ul>
-    <li><a href="./presentations/09_03_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/4%20Методы%20решения%20задач%201(Scanline).pdf">Презентация</a></li>
     <li><a href="./homework/hw4/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -39,7 +39,7 @@
 <details>
   <summary>Строки</summary>
   <ul>
-    <li><a href="./presentations/16_03_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/5%20Строки(KMP%2CHash%2CZ-func).pdf">Презентация</a></li>
     <li><a href="./homework/hw5/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -47,7 +47,7 @@
 <details>
   <summary>Графы 1</summary>
   <ul>
-    <li><a href="./presentations/23_03_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/6%20Графы%201(DFS%2CBFS%2Ctop-sort).pdf">Презентация</a></li>
     <li><a href="./homework/hw6/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -55,7 +55,7 @@
 <details>
   <summary>Динамическое программирование</summary>
   <ul>
-    <li><a href="./presentations/30_03_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/7%20Динамическое%20программирование.pdf">Презентация</a></li>
     <li><a href="./homework/hw7/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -63,7 +63,7 @@
 <details>
   <summary>Дерево отрезков 1</summary>
   <ul>
-    <li><a href="./presentations/06_04_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/8%20Дерево%20отрезков%201.pdf">Презентация</a></li>
     <li><a href="./homework/hw8/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -71,7 +71,7 @@
 <details>
   <summary>Дерево отрезков 2</summary>
   <ul>
-    <li><a href="./presentations/13_04_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/9%20Дерево%20отрезков%202(lazy%20propagation).pdf">Презентация</a></li>
     <li><a href="./homework/hw9/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -79,7 +79,7 @@
 <details>
   <summary>Графы 2</summary>
   <ul>
-    <li><a href="./presentations/20_04_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/10%20Графы%202(Dijkstra%2CBSU).pdf">Презентация</a></li>
     <li><a href="./homework/hw10/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -87,7 +87,7 @@
 <details>
   <summary>Методы решения задач 2</summary>
   <ul>
-    <li><a href="./presentations/27_04_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/11%20Методы%20решения%20задач%202(bruteforseTesting%2CbinaryLifting).pdf">Презентация</a></li>
     <li><a href="./homework/hw11/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -95,7 +95,7 @@
 <details>
   <summary>Математика</summary>
   <ul>
-    <li><a href="./presentations/09_05_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/12%20Математика(NOK%2CNOD%2CРешето%20Эратосфена).pdf">Презентация</a></li>
     <li><a href="./homework/hw12/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
@@ -103,24 +103,13 @@
 <details>
   <summary>Алгоритмы в индустрии</summary>
   <ul>
-    <li><a href="./presentations/11_05_2024.pptx">Презентация</a></li>
-    <li><a href="./homework/hw13/tasks.md">Задачи для самостоятельного решения</a></li>
+    <li><a href="./Presentations/13%20Алгоритмы%20в%20индустрии.pdf">Презентация</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Собеседования</summary>
   <ul>
-    <li><a href="./presentations/18_05_2024.pptx">Презентация</a></li>
-    <li><a href="./homework/hw14/tasks.md">Задачи для самостоятельного решения</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Экзамен</summary>
-  <ul>
-    <li><a href="./presentations/21_05_2024.pptx">Презентация</a></li>
-    <li><a href="./homework/hw15/tasks.md">Задачи для самостоятельного решения</a></li>
-    <li><a href="./homework/hw15/solutions/">Решения задач</a></li>
+    <li><a href="./Presentations/14%20Собеседования.pdf">Презентация</a></li>
   </ul>
 </details>
