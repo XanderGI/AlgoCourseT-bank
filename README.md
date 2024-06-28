@@ -15,7 +15,7 @@
 <details>
   <summary>Базовые структуры данных</summary>
   <ul>
-    <li><a href="./presentations/24_02_2024.pptx">Презентация</a></li>
+    <li><a href="https://github.com/XanderGI/AlgoCourseT-bank/blob/Add-all-tasks/Presentations/1%20%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%2C%20%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8%2C%20%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%BE%D0%B8%D1%81%D0%BA.pdf">Презентация</a></li>
     <li><a href="./homework/hw2/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
