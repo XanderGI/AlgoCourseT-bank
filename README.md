@@ -7,7 +7,7 @@
 <details>
   <summary>Введение, сортировки, бинарный поиск</summary>
   <ul>
-    <li><a href="./presentations/17_02_2024.pptx">Презентация</a></li>
+    <li><a href="./Presentations/1%20Введение%2C%20сортировки%2C%20бинарный%20поиск.pdf">Презентация</a></li>
     <li><a href="./homework/hw1/tasks.md">Задачи для самостоятельного решения</a></li>
   </ul>
 </details>
