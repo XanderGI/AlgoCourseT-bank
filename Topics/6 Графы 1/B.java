@@ -1,5 +1,3 @@
-//package Tink.less6;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,7 +12,7 @@ public class TaskB6FindCycle {
         colors[v] = 1;
         for (int edge : listOfEdges.get(v)) {
             if (colors[edge] == 0) {
-                if (dfs(edge,listOfEdges,colors)) {
+                if (dfs(edge, listOfEdges, colors)) {
                     return true;
                 }
             } else if (colors[edge] == 1) {
@@ -29,7 +27,7 @@ public class TaskB6FindCycle {
         String[] data = reader.readLine().split(" ");
         int n = Integer.parseInt(data[0]);
         int m = Integer.parseInt(data[1]);
-        int[] colors = new int[n+1];
+        int[] colors = new int[n + 1];
         List<List<Integer>> listOfEdges = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
             listOfEdges.add(new ArrayList<>());
@@ -44,7 +42,7 @@ public class TaskB6FindCycle {
 
         for (int i = 1; i <= n; i++) {
             if (colors[i] == 0) {
-                if (dfs(i,listOfEdges,colors)) {
+                if (dfs(i, listOfEdges, colors)) {
                     result = 1;
                     break;
                 }

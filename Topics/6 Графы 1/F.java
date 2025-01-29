@@ -1,5 +1,3 @@
-//package Tink.less6;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,11 +9,11 @@ import java.util.List;
 public class TaskF6AlchemyAndBFS {
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    static int bfs(HashMap<String,List<String>> map, String firstElement, String resultElement) {
+    static int bfs(HashMap<String, List<String>> map, String firstElement, String resultElement) {
         ArrayDeque<String> arrayDeque = new ArrayDeque<>();
         arrayDeque.add(firstElement);
-        HashMap<String,Integer> mapForCheckVisited = new HashMap<>();
-        mapForCheckVisited.put(firstElement,0);
+        HashMap<String, Integer> mapForCheckVisited = new HashMap<>();
+        mapForCheckVisited.put(firstElement, 0);
         while (!arrayDeque.isEmpty()) {
             String currentElement = arrayDeque.pollFirst();
             if (currentElement.equals(resultElement)) {
@@ -32,6 +30,7 @@ public class TaskF6AlchemyAndBFS {
         }
         return -1;
     }
+
     public static void main(String[] args) throws IOException {
         int n = Integer.parseInt(reader.readLine());
         HashMap<String, List<String>> map = new HashMap<>();
@@ -43,6 +42,6 @@ public class TaskF6AlchemyAndBFS {
         }
         String firstElement = reader.readLine();
         String resultElement = reader.readLine();
-        System.out.println(bfs(map,firstElement,resultElement));
+        System.out.println(bfs(map, firstElement, resultElement));
     }
 }

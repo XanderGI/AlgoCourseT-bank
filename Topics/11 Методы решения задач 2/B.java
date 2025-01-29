@@ -1,5 +1,3 @@
-//package Tink.less11;
-
 import java.util.*;
 
 public class TaskB11RequestMinCostEdgeLCA {
@@ -19,7 +17,7 @@ public class TaskB11RequestMinCostEdgeLCA {
         for (int i = 0; i < q; i++) {
             int u = sc.nextInt();
             int v = sc.nextInt();
-            result.append(graph.findMinEdgeOnPath(u,v)).append("\n");
+            result.append(graph.findMinEdgeOnPath(u, v)).append("\n");
         }
         System.out.print(result);
     }
@@ -113,12 +111,12 @@ class Graph {
         }
         for (int i = logN; i >= 0; i--) {
             if (nodes[u].ancestors[i][0] != nodes[v].ancestors[i][0]) {
-                minWeight = Math.min(minWeight, Math.min(nodes[u].ancestors[i][1],nodes[v].ancestors[i][1]));
+                minWeight = Math.min(minWeight, Math.min(nodes[u].ancestors[i][1], nodes[v].ancestors[i][1]));
                 u = nodes[u].ancestors[i][0];
                 v = nodes[v].ancestors[i][0];
             }
         }
-        minWeight = Math.min(minWeight, Math.min(nodes[u].ancestors[0][1],nodes[v].ancestors[0][1]));
+        minWeight = Math.min(minWeight, Math.min(nodes[u].ancestors[0][1], nodes[v].ancestors[0][1]));
         return minWeight;
     }
 }

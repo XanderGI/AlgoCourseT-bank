@@ -1,5 +1,3 @@
-//package Tink.less11;
-
 import java.util.*;
 
 public class TaskD11DPMinCostSplitWood {

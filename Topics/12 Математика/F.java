@@ -1,5 +1,3 @@
-//package Tink.less12;
-
 import java.util.Scanner;
 
 public class TaskF12BruteForceMyPasswordAndModularArithmetic {
@@ -24,6 +22,6 @@ public class TaskF12BruteForceMyPasswordAndModularArithmetic {
         long m = sc.nextLong();
         long k = sc.nextLong();
         MOD = sc.nextLong();
-        System.out.print((modPow(m,n,MOD)*modPow(k,MOD-2,MOD))%MOD);
+        System.out.print((modPow(m, n, MOD) * modPow(k, MOD - 2, MOD)) % MOD);
     }
 }

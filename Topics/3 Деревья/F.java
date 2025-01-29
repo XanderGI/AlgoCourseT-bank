@@ -1,5 +1,3 @@
-//package Tink.less3;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,13 +6,15 @@ import java.util.Random;
 public class Task3FrealizationTreapForContest {
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     static Node root;
+
     static class Node {
         int value;
         long priority;
         Node left;
         Node right;
         private static final Random random = new Random();
-        public Node (int value) {
+
+        public Node(int value) {
             this.value = value;
             this.priority = random.nextLong() & Long.MAX_VALUE;
         }
@@ -23,12 +23,16 @@ public class Task3FrealizationTreapForContest {
     static class Pair {
         Node left;
         Node right;
-        public Pair() {}
+
+        public Pair() {
+        }
+
         public Pair(Node left, Node right) {
             this.left = left;
             this.right = right;
         }
     }
+
     /*T(v) <= T(u)*/
     static Node merge(Node v, Node u) {
         if (v == null) { // значит отдаем только u
@@ -36,10 +40,10 @@ public class Task3FrealizationTreapForContest {
         } else if (u == null) { //значит отдаем только v
             return v;
         } else if (v.priority > u.priority) { // значит надо склеить правое поддерево v и u
-            v.right = merge(v.right,u);
+            v.right = merge(v.right, u);
             return v;
         } else {
-            u.left = merge(v,u.left); // левое поддерево u и все дерево v
+            u.left = merge(v, u.left); // левое поддерево u и все дерево v
             return u;
         }
 
@@ -50,13 +54,13 @@ public class Task3FrealizationTreapForContest {
             return new Pair();
         } else { /*отсекаем правое поддерево*/
             if (root.value <= value) {
-                Pair pair = split(root.right,value);
+                Pair pair = split(root.right, value);
                 root.right = pair.left;
-                return new Pair(root,pair.right);
+                return new Pair(root, pair.right);
             } else { /*отсекаем левое поддерево*/
-                Pair pair = split(root.left,value);
+                Pair pair = split(root.left, value);
                 root.left = pair.right;
-                return new Pair(pair.left,root);
+                return new Pair(pair.left, root);
             }
         }
     }
@@ -81,9 +85,9 @@ public class Task3FrealizationTreapForContest {
             if (root.value == value) {
                 return root.value;
             } else if (root.value > value) {
-                return findElement(root.left,value);
+                return findElement(root.left, value);
             } else {
-                return findElement(root.right,value);
+                return findElement(root.right, value);
             }
         } else {
             return -1;
@@ -92,12 +96,12 @@ public class Task3FrealizationTreapForContest {
 
     /*left <= value < right*/
     static Node addElement(Node root, int value) {
-        if (findElement(root,value) != -1) {
+        if (findElement(root, value) != -1) {
             return root;
         }
-        Pair splitTree = split(root,value);
+        Pair splitTree = split(root, value);
         Node newNode = new Node(value);
-        return merge(merge(splitTree.left,newNode),splitTree.right);
+        return merge(merge(splitTree.left, newNode), splitTree.right);
     }
 
     public static void main(String[] args) throws IOException {
@@ -108,14 +112,14 @@ public class Task3FrealizationTreapForContest {
             String[] pair = reader.readLine().split(" ");
             int value = Integer.parseInt(pair[1]);
             switch (pair[0]) {
-                case "+" :
+                case "+":
                     if (prevValue != -1) {
                         value = (prevValue + value) % 1000000000;
                         prevValue = -1;
                     }
                     root = addElement(root, value);
                     break;
-                case "?" :
+                case "?":
                     int nextValue = next(root, value);
                     result.append(nextValue).append("\n");
                     prevValue = nextValue;

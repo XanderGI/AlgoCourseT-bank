@@ -1,5 +1,3 @@
-//package Tink.less10;
-
 import java.util.*;
 import java.io.*;
 

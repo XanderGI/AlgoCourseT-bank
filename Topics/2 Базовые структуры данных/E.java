@@ -1,5 +1,3 @@
-//package Tink.less2;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,7 +30,7 @@ public class TaskE2SortingWagonsWithStack {
             }
         }
         for (int j = 0; j < stringOfSeq.length() - 1; j++) {
-            if (stringOfSeq.charAt(j) == stringOfSeq.charAt(j+1)) {
+            if (stringOfSeq.charAt(j) == stringOfSeq.charAt(j + 1)) {
                 countOfWagonsForOperation++;
             } else {
                 numberOfOperations++;
@@ -42,6 +40,6 @@ public class TaskE2SortingWagonsWithStack {
         }
         numberOfOperations++;
         result.append(stringOfSeq.charAt(stringOfSeq.length() - 1) + " " + countOfWagonsForOperation + "\n");
-        System.out.println(result.insert(0,numberOfOperations));
+        System.out.println(result.insert(0, numberOfOperations));
     }
 }

@@ -1,5 +1,3 @@
-//package Tink.less9;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -47,8 +45,12 @@ public class TaskE9VIKA {
             int x2 = Integer.parseInt(request[2]);
             int y2 = Integer.parseInt(request[3]);
             if (x1 > x2 || y1 > y2) { // swap
-                x1 ^= x2; x2 ^= x1; x1 ^= x2;
-                y1 ^= y2; y2 ^= y1; y1 ^= y2;
+                x1 ^= x2;
+                x2 ^= x1;
+                x1 ^= x2;
+                y1 ^= y2;
+                y2 ^= y1;
+                y1 ^= y2;
             }
             uniqueYCoordinates.add(y1);
             uniqueYCoordinates.add(++y2);
@@ -110,7 +112,7 @@ class SegmentTree {
         if (right - left == 1) {
             minLength[v] = dist[left];
         } else {
-            int middle = (right+left) >>> 1;
+            int middle = (right + left) >>> 1;
             build(2 * v, left, middle, dist);
             build(2 * v + 1, middle, right, dist);
             minLength[v] = minLength[2 * v] + minLength[2 * v + 1];

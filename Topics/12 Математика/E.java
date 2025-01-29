@@ -1,5 +1,3 @@
-//package Tink.less12;
-
 import java.util.Scanner;
 
 public class TaskE12FindBinomialCoefficient {
@@ -8,7 +6,7 @@ public class TaskE12FindBinomialCoefficient {
     static long findFactorial(int n) {
         long result = 1;
         for (int i = 2; i <= n; i++) {
-            result = (result*i)%MOD;
+            result = (result * i) % MOD;
         }
         return result;
     }
@@ -30,7 +28,7 @@ public class TaskE12FindBinomialCoefficient {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
-        long denominator = (findFactorial(k) * findFactorial(n-k))%MOD;
-        System.out.print((findFactorial(n) * modPow(denominator,MOD-2,MOD))%MOD);
+        long denominator = (findFactorial(k) * findFactorial(n - k)) % MOD;
+        System.out.print((findFactorial(n) * modPow(denominator, MOD - 2, MOD)) % MOD);
     }
 }

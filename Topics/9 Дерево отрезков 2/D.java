@@ -1,5 +1,3 @@
-//package Tink.less9;
-
 import java.util.*;
 import java.io.*;
 
@@ -55,7 +53,7 @@ public class D9Testing {
             return;
         }
         push(v);
-        int m = (right+left) >>> 1;
+        int m = (right + left) >>> 1;
         update(L, R, v * 2 + 1, left, m, x);
         update(L, R, v * 2 + 2, m, right, x);
         tree[v].max = Math.max(tree[v * 2 + 1].max, tree[v * 2 + 2].max);
@@ -82,8 +80,8 @@ public class D9Testing {
             int y1 = Integer.parseInt(req[1]);
             int x2 = Integer.parseInt(req[2]);
             int y2 = Integer.parseInt(req[3]);
-            requests.add(new Square(x1+offset,y1+offset,y2+offset,true));
-            requests.add(new Square(x2+offset,y2+offset,y1+offset,false));
+            requests.add(new Square(x1 + offset, y1 + offset, y2 + offset, true));
+            requests.add(new Square(x2 + offset, y2 + offset, y1 + offset, false));
         }
         Collections.sort(requests, (a, b) -> {
             if (a.x != b.x) {

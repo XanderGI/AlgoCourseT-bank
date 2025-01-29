@@ -1,11 +1,10 @@
-//package Tink.less1;
-
 import java.util.Scanner;
 import java.util.StringJoiner;
 
 public class Task6binSearch {
     static long counter = 0;
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String... args) {
         int n = sc.nextInt();
         int[] array = new int[n];
@@ -20,6 +19,7 @@ public class Task6binSearch {
         }
         System.out.print(stringJoiner);
     }
+
     public static void mergeSort(int[] a, int n) {
 
         if (n < 2) {
@@ -47,9 +47,7 @@ public class Task6binSearch {
         while (i < left && j < right) {
             if (l[i] <= r[j]) {
                 a[k++] = l[i++];
-            }
-
-            else {
+            } else {
                 a[k++] = r[j++];
                 counter += left - i;
             }

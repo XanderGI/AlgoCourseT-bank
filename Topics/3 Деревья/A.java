@@ -1,5 +1,3 @@
-//package Tink.less3;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -38,12 +36,12 @@ public class TaskA3FindDiameter {
     }
 
     public static Node buildTree(int[] array) {
-        Map<Integer,Node> nodes = new HashMap<>();
-        nodes.put(0,new Node(0));
+        Map<Integer, Node> nodes = new HashMap<>();
+        nodes.put(0, new Node(0));
         for (int j = 1; j < array.length; j++) {
-            int parentValue = array[j-1];
-            Node parent = nodes.computeIfAbsent(parentValue,Node::new);
-            Node child = nodes.computeIfAbsent(j,Node::new);
+            int parentValue = array[j - 1];
+            Node parent = nodes.computeIfAbsent(parentValue, Node::new);
+            Node child = nodes.computeIfAbsent(j, Node::new);
             parent.addChild(child);
         }
         return nodes.get(0);
@@ -53,7 +51,7 @@ public class TaskA3FindDiameter {
     public static void dfs(Node deepestNode, int currentDistance) {
         visited.add(deepestNode);
 
-        diameter = Math.max(currentDistance,diameter);
+        diameter = Math.max(currentDistance, diameter);
 
         // Идем по всем потомкам узла
         for (Node child : deepestNode.listOfChild) {
@@ -72,12 +70,12 @@ public class TaskA3FindDiameter {
         int n = Integer.parseInt(br.readLine());
         String[] data = br.readLine().split(" ");
         int[] array = new int[n];
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n - 1; i++) {
             array[i] = Integer.parseInt(data[i]);
         }
         Node root = buildTree(array);
-        dfs(deepestNode,0);
-        results.insert(0,maxHeight + " " + diameter + "\n");
+        dfs(deepestNode, 0);
+        results.insert(0, maxHeight + " " + diameter + "\n");
         System.out.println(results.toString().trim());
     }
 }

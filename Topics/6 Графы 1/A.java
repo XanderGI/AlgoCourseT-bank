@@ -1,6 +1,3 @@
-//package Tink.less6;
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,7 +13,7 @@ public class TaskA6findCountOfComponentConnectivity {
         component.add(v);
         for (int edge : listOfEdges.get(v)) {
             if (used[edge] != 1) {
-                dfs(edge,used,listOfEdges,component);
+                dfs(edge, used, listOfEdges, component);
             }
         }
     }
@@ -25,7 +22,7 @@ public class TaskA6findCountOfComponentConnectivity {
         String[] data = reader.readLine().split(" ");
         int n = Integer.parseInt(data[0]);
         int m = Integer.parseInt(data[1]);
-        int[] used = new int[n+1];
+        int[] used = new int[n + 1];
         List<List<Integer>> listOfEdges = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
             listOfEdges.add(new ArrayList<>());
@@ -43,7 +40,7 @@ public class TaskA6findCountOfComponentConnectivity {
         for (int i = 1; i <= n; i++) {
             if (used[i] != 1) {
                 List<Integer> component = new ArrayList<>();
-                dfs(i,used,listOfEdges,component);
+                dfs(i, used, listOfEdges, component);
                 Collections.sort(component);
                 listOfComponents.add(component);
             }

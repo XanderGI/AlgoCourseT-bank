@@ -1,5 +1,3 @@
-//package Tink.less9;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -66,7 +64,7 @@ public class TaskA9LazyPropagationWithSum {
         }
 
         long getMin(int left, int right) {
-            return findMinValue(left,right,0);
+            return findMinValue(left, right, 0);
         }
 
         static long findMinValue(int left, int right, int node) {
@@ -76,9 +74,9 @@ public class TaskA9LazyPropagationWithSum {
                 return edges[node].min;
             } else {
                 lazyPropagation(node);
-                long minLeft = findMinValue(left,right,node*2+1);
-                long minRight = findMinValue(left,right,node*2+2);
-                return Math.min(minLeft,minRight);
+                long minLeft = findMinValue(left, right, node * 2 + 1);
+                long minRight = findMinValue(left, right, node * 2 + 2);
+                return Math.min(minLeft, minRight);
             }
         }
 
@@ -109,10 +107,10 @@ public class TaskA9LazyPropagationWithSum {
             switch (operation) {
                 case 1:
                     int value = Integer.parseInt(request[3]);
-                    segmentTree.changeValuesOnInterval(left,right,value);
+                    segmentTree.changeValuesOnInterval(left, right, value);
                     break;
                 case 2:
-                    result.append(segmentTree.getMin(left,right)).append("\n");
+                    result.append(segmentTree.getMin(left, right)).append("\n");
                     break;
             }
         }

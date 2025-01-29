@@ -1,5 +1,3 @@
-//package Tink.less5;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,16 +23,15 @@ public class TaskF5algManacher {
                 center = i;
                 radius = i + arrayOfRad[i];
             }
-            count += (arrayOfRad[i]+1)/2;
+            count += (arrayOfRad[i] + 1) / 2;
         }
         return count;
     }
 
 
-
     public static void main(String[] args) throws IOException {
         String text = reader.readLine();
-        String modifyText = " "+String.join(" ", text.split(""))+" ";
+        String modifyText = " " + String.join(" ", text.split("")) + " ";
         long counter = countManacherPalindromes(modifyText);
         System.out.println(counter);
     }

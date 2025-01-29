@@ -1,5 +1,3 @@
-//package Tink.less10;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,21 +10,21 @@ public class TaskA10DSU {
         String[] firstLine = reader.readLine().split(" ");
         int n = Integer.parseInt(firstLine[0]);
         int m = Integer.parseInt(firstLine[1]);
-        DSU dsu = new DSU(n+1);
+        DSU dsu = new DSU(n + 1);
         int v;
         int u;
         for (int i = 0; i < m; i++) {
             String[] request = reader.readLine().split(" ");
             String operation = request[0];
             switch (operation) {
-                case "union" :
+                case "union":
                     v = Integer.parseInt(request[1]);
                     u = Integer.parseInt(request[2]);
-                    dsu.union(v,u);
+                    dsu.union(v, u);
                     break;
-                case "get" :
+                case "get":
                     v = Integer.parseInt(request[1]);
-                    int [] resultArray = dsu.get(v);
+                    int[] resultArray = dsu.get(v);
                     StringBuilder temp = new StringBuilder();
                     for (int element : resultArray) {
                         temp.append(element + " ");
@@ -77,13 +75,13 @@ class DSU {
         if (v != u) {
             if (rank[v] < rank[u]) {
                 parent[v] = u;
-                min[u] = Math.min(min[v],min[u]);
-                max[u] = Math.max(max[v],max[u]);
+                min[u] = Math.min(min[v], min[u]);
+                max[u] = Math.max(max[v], max[u]);
                 size[u] += size[v];
             } else {
                 parent[u] = v;
-                min[v] = Math.min(min[v],min[u]);
-                max[v] = Math.max(max[v],max[u]);
+                min[v] = Math.min(min[v], min[u]);
+                max[v] = Math.max(max[v], max[u]);
                 size[v] += size[u];
                 if (rank[v] == rank[u]) {
                     rank[v]++;
@@ -94,6 +92,6 @@ class DSU {
 
     int[] get(int v) {
         int root = find(v);
-        return new int[]{min[root],max[root],size[root]};
+        return new int[]{min[root], max[root], size[root]};
     }
 }

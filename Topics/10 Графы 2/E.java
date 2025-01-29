@@ -1,5 +1,3 @@
-//package Tink.less10;
-
 import java.util.*;
 
 public class Task10EDijkstraFindMinWay {
@@ -28,10 +26,10 @@ public class Task10EDijkstraFindMinWay {
         int n = scanner.nextInt();
         int m = scanner.nextInt();
         List<List<Edge>> graph = new ArrayList<>();
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             graph.add(new ArrayList<>());
         }
-        for(int i = 0; i < m; i++) {
+        for (int i = 0; i < m; i++) {
             int u = scanner.nextInt() - 1;
             int v = scanner.nextInt() - 1;
             int w = scanner.nextInt();
@@ -47,6 +45,7 @@ public class Task10EDijkstraFindMinWay {
 
 class Edge {
     int to, weight;
+
     Edge(int to, int weight) {
         this.to = to;
         this.weight = weight;

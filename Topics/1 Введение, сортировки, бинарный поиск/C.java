@@ -1,5 +1,3 @@
-//package Tink.less1;
-
 import java.util.Scanner;
 
 public class Task3binSearch {
@@ -11,7 +9,7 @@ public class Task3binSearch {
         String sign = "";
         int middle;
         while (left < right) {
-            middle = (left+right + 1)/2;
+            middle = (left + right + 1) / 2;
             System.out.println(middle);
             sign = sc.next();
             if (sign.equals("<")) {

@@ -1,5 +1,3 @@
-//package Tink.less5;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -35,10 +33,10 @@ public class TaskG5RandomHashFromSet {
 
         int secondLength = Integer.parseInt(reader.readLine());
         long[] prefixHashSecond = HashCalculator.initSequenceHashes(reader.readLine().split(" "));
-        for (int maxSeq = Math.min(firstLength,secondLength); maxSeq > 0; maxSeq--) { // min тк отрезок не может превышать мощность min множества.
-            for (int i = 0; i <= firstLength - maxSeq; i++ ) {
+        for (int maxSeq = Math.min(firstLength, secondLength); maxSeq > 0; maxSeq--) { // min тк отрезок не может превышать мощность min множества.
+            for (int i = 0; i <= firstLength - maxSeq; i++) {
                 for (int j = 0; j <= secondLength - maxSeq; j++) {
-                    if ((prefixHashFirst[firstLength-i] + prefixHashSecond[secondLength - maxSeq - j]) == (prefixHashSecond[secondLength-j] + prefixHashFirst[firstLength-maxSeq-i])) {
+                    if ((prefixHashFirst[firstLength - i] + prefixHashSecond[secondLength - maxSeq - j]) == (prefixHashSecond[secondLength - j] + prefixHashFirst[firstLength - maxSeq - i])) {
                         System.out.println(maxSeq);
                         return; // тк начинаем с макс. последовательности => первый найденный совпадающий подотрезок и есть максимальный.
                     }

@@ -1,13 +1,10 @@
-//package Tink.less11;
-
-
 import java.util.*;
 
 public class TaskA11RequestsLCA {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int logN = (int)(Math.log(n) / Math.log(2)) + 1;
+        int logN = (int) (Math.log(n) / Math.log(2)) + 1;
         Graph graph = new Graph(n, logN);
         for (int i = 1; i < n; i++) {
             int v = sc.nextInt();

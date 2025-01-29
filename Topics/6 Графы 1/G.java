@@ -1,5 +1,3 @@
-//package Tink.less6;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,13 +23,13 @@ public class Task6GMinMaxDistanceWithFloyd {
             int v = Integer.parseInt(line[0]);
             int u = Integer.parseInt(line[1]);
             int w = Integer.parseInt(line[2]);
-            matrixOfAdjacency[v-1][u-1] = w; // v->u
-            matrixOfAdjacency[u-1][v-1] = w; //u->v
+            matrixOfAdjacency[v - 1][u - 1] = w; // v->u
+            matrixOfAdjacency[u - 1][v - 1] = w; //u->v
         }
 
         for (int k = 0; k < n; k++) {
             for (int j = 0; j < n; j++) {
-                for (int i =0; i < n; i++) {
+                for (int i = 0; i < n; i++) {
                     if (matrixOfAdjacency[i][k] != Integer.MAX_VALUE && matrixOfAdjacency[k][j] != Integer.MAX_VALUE) {
                         matrixOfAdjacency[i][j] = Math.min(matrixOfAdjacency[i][j], matrixOfAdjacency[i][k] + matrixOfAdjacency[k][j]);
                     }
@@ -43,11 +41,11 @@ public class Task6GMinMaxDistanceWithFloyd {
         for (int i = 0; i < n; i++) {
             int maxDistance = Integer.MIN_VALUE;
             for (int j = 0; j < n; j++) {
-                maxDistance = Math.max(maxDistance,matrixOfAdjacency[i][j]);
+                maxDistance = Math.max(maxDistance, matrixOfAdjacency[i][j]);
             }
             if (minMaxDistance > maxDistance) {
                 minMaxDistance = maxDistance;
-                result = i+1;
+                result = i + 1;
             }
         }
         System.out.println(result);

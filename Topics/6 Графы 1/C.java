@@ -1,5 +1,3 @@
-//package Tink.less6;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -45,8 +43,7 @@ public class TaskC6TopologicalSort {
 
         if (checkValidTopSort(pos, listOfEdges)) {
             System.out.println("YES");
-        }
-        else {
+        } else {
             System.out.println("NO");
         }
 

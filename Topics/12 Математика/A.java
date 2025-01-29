@@ -1,5 +1,3 @@
-//package Tink.less12;
-
 import java.util.Scanner;
 
 public class TaskA12LCAwithGCD {
@@ -16,6 +14,6 @@ public class TaskA12LCAwithGCD {
         Scanner sc = new Scanner(System.in);
         long N = sc.nextLong();
         long K = sc.nextLong();
-        System.out.println((N*K)/gcd(N,K));
+        System.out.println((N * K) / gcd(N, K));
     }
 }

@@ -1,5 +1,3 @@
-//package Tink.less4;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -36,7 +34,7 @@ public class TaskE4PrefixSumAndBinarySearchByAns {
         long right = sumOfAll;
 
         while (left < right) {
-            long middle = left+(right-left)/2;
+            long middle = left + (right - left) / 2;
             if (isAnswer(middle, k, array)) {
                 right = middle;
             } else {

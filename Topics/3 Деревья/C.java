@@ -1,5 +1,3 @@
-//package Tink.less3;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,8 +8,9 @@ import java.util.Map;
 
 public class Task3CfindLCA {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static Map<Integer,Node> nodes = new HashMap<>();
+    static Map<Integer, Node> nodes = new HashMap<>();
     static StringBuilder result = new StringBuilder();
+
     static class Node {
         int value;
         Node parent;
@@ -32,18 +31,20 @@ public class Task3CfindLCA {
         }
 
     }
+
     static Node buildTree() throws IOException {
         br.readLine();
         String[] arrayOfNode = br.readLine().split(" ");
-        nodes.put(0,new Node(0));
+        nodes.put(0, new Node(0));
         for (int i = 1; i <= arrayOfNode.length; i++) {
-            int parentValue = Integer.parseInt(arrayOfNode[i-1]);
-            Node parent = nodes.computeIfAbsent(parentValue,Node::new);
-            Node child = nodes.computeIfAbsent(i,Node::new);
+            int parentValue = Integer.parseInt(arrayOfNode[i - 1]);
+            Node parent = nodes.computeIfAbsent(parentValue, Node::new);
+            Node child = nodes.computeIfAbsent(i, Node::new);
             parent.addChild(child);
         }
         return nodes.get(0);
     }
+
     public static void printPreOrder(Node root) {
         if (root != null) {
             System.out.print(root.value + " ");
@@ -54,13 +55,13 @@ public class Task3CfindLCA {
     }
 
     public static Node findLCA(Node u, Node v) {
-        while(u.height > v.height) {
+        while (u.height > v.height) {
             u = u.parent;
         }
         while (v.height > u.height) {
             v = v.parent;
         }
-        while(u.value != v.value) {
+        while (u.value != v.value) {
             u = u.parent;
             v = v.parent;
         }
@@ -74,7 +75,7 @@ public class Task3CfindLCA {
             String[] pair = br.readLine().split(" ");
             Node u = nodes.get(Integer.parseInt(pair[0]));
             Node v = nodes.get(Integer.parseInt(pair[1]));
-            result.append(findLCA(u,v).value).append("\n");
+            result.append(findLCA(u, v).value).append("\n");
         }
         System.out.println(result);
     }

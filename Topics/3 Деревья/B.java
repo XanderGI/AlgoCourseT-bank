@@ -1,5 +1,3 @@
-//package Tink.less3;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -28,8 +26,7 @@ public class Task3BTestBSTandAVL {
 
     }
 
-    static boolean isBST(Node root)
-    {
+    static boolean isBST(Node root) {
         if (root != null) {
             /*left->center->right*/
             if (!isBST(root.left)) return false;
@@ -59,10 +56,15 @@ public class Task3BTestBSTandAVL {
             Node rightNode = right != -1 ? nodes.computeIfAbsent(right, Node::new) : null;
 
             Node newNode = nodes.computeIfAbsent(i, k -> new Node(k, leftNode, rightNode));
-            if (leftNode != null){ newNode.left = leftNode; }
-            if (rightNode != null){ newNode.right = rightNode; }
+            if (leftNode != null) {
+                newNode.left = leftNode;
+            }
+            if (rightNode != null) {
+                newNode.right = rightNode;
+            }
         }
     }
+
     /*https://javascopes.com/balanced-binary-tree-check-ccdcea44/*/
     public static int checkBalance(Node root) {
         if (root == null) {
@@ -76,10 +78,10 @@ public class Task3BTestBSTandAVL {
         if (rightSubTree == -1) {
             return -1;
         }
-        if (Math.abs(rightSubTree-leftSubTree) > 1) {
+        if (Math.abs(rightSubTree - leftSubTree) > 1) {
             return -1;
         }
-        return Math.max(rightSubTree,leftSubTree) + 1;
+        return Math.max(rightSubTree, leftSubTree) + 1;
     }
 
     public static boolean isBalanced(Node root) {
@@ -90,7 +92,7 @@ public class Task3BTestBSTandAVL {
         String[] firstLine = br.readLine().split(" ");
         int n = Integer.parseInt(firstLine[0]);
         int r = Integer.parseInt(firstLine[1]);
-        BuildBinaryTree(n,r);
+        BuildBinaryTree(n, r);
         Node root = nodes.get(r);
         System.out.println(isBST(root) && isBalanced(root) ? 1 : 0);
     }

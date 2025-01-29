@@ -1,5 +1,3 @@
-//package Tink.less2;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,7 +14,7 @@ public class TaskF2AstrogradDeque {
         int countDeparted = 0;
         for (int i = 0; i < countOfRequests; i++) {
             String[] request = br.readLine().split(" ");
-            Integer id = (request.length > 1)  ? Integer.parseInt(request[1]) : null;
+            Integer id = (request.length > 1) ? Integer.parseInt(request[1]) : null;
             switch (request[0]) {
                 case "1" -> {
                     deque.addLast(id);

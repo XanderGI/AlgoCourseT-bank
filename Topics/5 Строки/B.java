@@ -1,14 +1,12 @@
-//package Tink.less5;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-
 public class TaskB5KMP {
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder result = new StringBuilder();
+
     public static int[] prefixFunc(String substring) {
         int[] prefMassive = new int[substring.length()];
         for (int i = 1, j = 0; i < substring.length(); i++) {
@@ -47,12 +45,12 @@ public class TaskB5KMP {
         result.append(tempResult.isEmpty() ? counter : counter + " ").append(tempResult.toString().trim()).append("\n");
     }
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         String text = reader.readLine();
         int countOfRequests = Integer.parseInt(reader.readLine());
         for (int i = 0; i < countOfRequests; i++) {
             String subString = reader.readLine();
-            KMP(text,subString);
+            KMP(text, subString);
         }
         System.out.print(result);
     }

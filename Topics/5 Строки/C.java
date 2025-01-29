@@ -1,5 +1,3 @@
-//package Tink.less5;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,7 +7,7 @@ public class TaskC5CycleShift {
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     static int counter;
     static final int coefficient = 37;
-    static final int mod = (int) 1e9+7;
+    static final int mod = (int) 1e9 + 7;
 
     static class Pair {
         long[] prefixHash;
@@ -31,29 +29,29 @@ public class TaskC5CycleShift {
         multiply[0] = 1;
         multiply[1] = coefficient;
         for (int j = 2; j <= string.length(); j++) {
-            multiply[j] = (multiply[j-1] * multiply[1]) % mod;
+            multiply[j] = (multiply[j - 1] * multiply[1]) % mod;
         }
 
-        return new Pair(prefixHash,multiply);
+        return new Pair(prefixHash, multiply);
     }
 
     static long calcHashOfSubstring(long[] prefixHash, long[] multiplyCoefficient, int left, int right) {
-        return ((long) mod * mod + prefixHash[right] - prefixHash[left-1] * multiplyCoefficient[right-left+1])%mod;
+        return ((long) mod * mod + prefixHash[right] - prefixHash[left - 1] * multiplyCoefficient[right - left + 1]) % mod;
     }
 
     public static void main(String[] args) throws IOException {
         String a = reader.readLine();
         String b = reader.readLine();
         int lengthB = b.length();
-        String bb = b+b;
+        String bb = b + b;
         Pair pairOfValuesB = calcPrefixHash(bb);
         HashSet<Long> hashSet = new HashSet<>();
         for (int j = 0; j <= bb.length() - lengthB; j++) {
-            hashSet.add(calcHashOfSubstring(pairOfValuesB.prefixHash, pairOfValuesB.correctMultiply,j+1,j+lengthB));
+            hashSet.add(calcHashOfSubstring(pairOfValuesB.prefixHash, pairOfValuesB.correctMultiply, j + 1, j + lengthB));
         }
         Pair pairOfValuesA = calcPrefixHash(a);
         for (int i = 0; i <= a.length() - lengthB; i++) {
-            Long hash = calcHashOfSubstring(pairOfValuesA.prefixHash, pairOfValuesA.correctMultiply,i+1,i+lengthB);
+            Long hash = calcHashOfSubstring(pairOfValuesA.prefixHash, pairOfValuesA.correctMultiply, i + 1, i + lengthB);
             if (hashSet.contains(hash)) {
                 counter++;
             }

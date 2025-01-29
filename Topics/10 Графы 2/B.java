@@ -1,5 +1,3 @@
-//package Tink.less10;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,20 +11,20 @@ public class TaskB10Kruskal {
         String[] firstLine = reader.readLine().split(" ");
         int n = Integer.parseInt(firstLine[0]);
         int m = Integer.parseInt(firstLine[1]);
-        Graph graph = new Graph(n,m);
+        Graph graph = new Graph(n, m);
         for (int i = 0; i < m; i++) {
             String[] newEdge = reader.readLine().split(" ");
             int left = Integer.parseInt(newEdge[0]);
             int right = Integer.parseInt(newEdge[1]);
             int weight = Integer.parseInt(newEdge[2]);
-            graph.edges[i] = new Edge(left,right,weight);
+            graph.edges[i] = new Edge(left, right, weight);
         }
         Arrays.sort(graph.edges, ((o1, o2) -> o1.weight - o2.weight));
-        DSU dsu = new DSU(n+1);
+        DSU dsu = new DSU(n + 1);
         for (Edge edge : graph.edges) {
             if (dsu.findParent(edge.left) != dsu.findParent(edge.right)) {
                 answer += edge.weight;
-                dsu.union(edge.left,edge.right);
+                dsu.union(edge.left, edge.right);
             }
         }
         System.out.println(answer);
@@ -71,10 +69,11 @@ class DSU {
 
 }
 
-class Edge  {
+class Edge {
     int left;
     int right;
     int weight;
+
     public Edge(int left, int right, int weight) {
         this.left = left;
         this.right = right;

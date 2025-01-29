@@ -1,6 +1,3 @@
-//package Tink.less1;
-
-
 import java.util.Scanner;
 
 public class TaskH1CounterSort {
@@ -22,21 +19,21 @@ public class TaskH1CounterSort {
 
         for (int i = 0; i < freqOfChar.length; i++) {
             if (freqOfChar[i] % 2 == 1) {
-                center = String.valueOf((char)('A' + i));
+                center = String.valueOf((char) ('A' + i));
                 freqOfChar[i]--;
                 break;
             }
         }
 
         for (int i = 0; i < freqOfChar.length; i++) {
-            while(freqOfChar[i] > 1) {
-                leftHalf.append((char)('A' + i));
-                rightHalf.insert(0, (char)('A' + i));
-                freqOfChar[i] -=2;
+            while (freqOfChar[i] > 1) {
+                leftHalf.append((char) ('A' + i));
+                rightHalf.insert(0, (char) ('A' + i));
+                freqOfChar[i] -= 2;
             }
         }
 
-        System.out.println(leftHalf + center +rightHalf);
+        System.out.println(leftHalf + center + rightHalf);
     }
 
     public static void main(String[] args) {

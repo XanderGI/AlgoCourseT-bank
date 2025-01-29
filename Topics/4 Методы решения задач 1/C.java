@@ -1,5 +1,3 @@
-//package Tink.less4;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -23,9 +21,9 @@ public class TaskC4cowsAndBinarySearchByAnswer {
     static int binarySearch(int[] posStalls, int cows) {
         int left = 0;
         int right = 1000000000;
-        while(right - left > 1) {
-            int middle  = (right+left)/2;
-            if (checkDistance(posStalls,middle,cows)) {
+        while (right - left > 1) {
+            int middle = (right + left) / 2;
+            if (checkDistance(posStalls, middle, cows)) {
                 left = middle;
             } else {
                 right = middle;
@@ -44,6 +42,6 @@ public class TaskC4cowsAndBinarySearchByAnswer {
             int pos = Integer.parseInt(secondLine[i]);
             posStalls[i] = pos;
         }
-        System.out.println(binarySearch(posStalls,countOfCows));
+        System.out.println(binarySearch(posStalls, countOfCows));
     }
 }

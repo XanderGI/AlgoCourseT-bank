@@ -1,5 +1,3 @@
-//package Tink.less4;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,7 +19,7 @@ public class TaskF4ScanLine {
         @Override
         public int compareTo(Object o) {
             Pair p = (Pair) o;
-            return Integer.compare(this.value,p.value);
+            return Integer.compare(this.value, p.value);
         }
 
         @Override
@@ -54,13 +52,13 @@ public class TaskF4ScanLine {
 
     public static void main(String[] args) throws IOException {
         int n = Integer.parseInt(reader.readLine());
-        Pair[] arrayOfPair = new Pair[n*2];
+        Pair[] arrayOfPair = new Pair[n * 2];
         for (int i = 0; i < n; i++) {
             String[] segment = reader.readLine().split(" ");
             int valueLeft = Integer.parseInt(segment[0]);
             int valueRight = Integer.parseInt(segment[1]);
-            arrayOfPair[2*i] = new Pair(valueLeft,'+');
-            arrayOfPair[2*i+1] = new Pair(valueRight,'-');
+            arrayOfPair[2 * i] = new Pair(valueLeft, '+');
+            arrayOfPair[2 * i + 1] = new Pair(valueRight, '-');
         }
         Arrays.sort(arrayOfPair);
         calcLengthOfNumericLine(arrayOfPair);

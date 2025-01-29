@@ -1,4 +1,3 @@
-//package Tink.less6;
 import java.util.*;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,10 +33,10 @@ public class TaskE6NumberTheoryAndBFS {
         }
 
         for (int i = 0; i < k; i++) {
-            listOfEdges.get(i).add(new Pair((i+1)%k,1)); // вес ребра = 1 тк остаток увеличивается на 1 => вес ребра = 1
-            listOfEdges.get(i).add(new Pair((10*i)%k,0)); // сумма не изменилась так как остаток остался прежним => вес ребра = 0
+            listOfEdges.get(i).add(new Pair((i + 1) % k, 1)); // вес ребра = 1 тк остаток увеличивается на 1 => вес ребра = 1
+            listOfEdges.get(i).add(new Pair((10 * i) % k, 0)); // сумма не изменилась так как остаток остался прежним => вес ребра = 0
         }
-        while(!arrayDeque.isEmpty()) { // используем bfs так как он обеспечивает нахождение кратчайшего пути ~ мин суммы.
+        while (!arrayDeque.isEmpty()) { // используем bfs так как он обеспечивает нахождение кратчайшего пути ~ мин суммы.
             int edge = arrayDeque.pollFirst();
             for (Pair pair : listOfEdges.get(edge)) {
                 if (distance[edge] + pair.w < distance[pair.v]) { // если нашли более минимальную сумму на текущ. итерации чем в массиве distance

@@ -1,5 +1,3 @@
-//package Tink.less8;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -76,7 +74,7 @@ public class TaskE8FindLIS {
             } else if (left.maxLen < right.maxLen) {
                 return right;
             } else {
-                return new Node(left.maxLen, (left.count + right.count)%MOD);
+                return new Node(left.maxLen, (left.count + right.count) % MOD);
             }
         }
 
@@ -107,7 +105,7 @@ public class TaskE8FindLIS {
                 int maxLength = 1;
                 int count = 1;
                 if (nums[i] > 0) {
-                    Node temp = tree.getMaxLenAndCount(0,max,0,0,nums[i]-1);
+                    Node temp = tree.getMaxLenAndCount(0, max, 0, 0, nums[i] - 1);
                     if (temp.maxLen + 1 > maxLength) {
                         maxLength = temp.maxLen + 1;
                         count = temp.count;
@@ -128,6 +126,6 @@ public class TaskE8FindLIS {
         for (int i = 0; i < n; i++) {
             array[i] = Integer.parseInt(data[i]);
         }
-        System.out.println((SegmentTree.findNumberOfLIS(array))%MOD);
+        System.out.println((SegmentTree.findNumberOfLIS(array)) % MOD);
     }
 }

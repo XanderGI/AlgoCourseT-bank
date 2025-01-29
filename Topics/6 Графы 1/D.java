@@ -1,5 +1,3 @@
-//package Tink.less6;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,6 +20,7 @@ public class TaskD6HungryHorseAndBFS {
             this.y = y;
             this.parent = null;
         }
+
         public Point(int x, int y, Point parent) {
             this.x = x;
             this.y = y;
@@ -34,15 +33,15 @@ public class TaskD6HungryHorseAndBFS {
     }
 
     static boolean isCorrectCoords(Point point) {
-        return point.x  > 0 && point.x <= n &&  point.y > 0 && point.y <= n;
+        return point.x > 0 && point.x <= n && point.y > 0 && point.y <= n;
     }
 
     static void bfs(ArrayDeque<Point> points, byte[][] matrixOfVisits, Point finishPoint) {
 
-        int[][] movements = {{1,2},{2,1},{-1,-2},{-2,-1},{2,-1},{1,-2},{-1,2},{-2,1}};
-        while(!points.isEmpty()) {
+        int[][] movements = {{1, 2}, {2, 1}, {-1, -2}, {-2, -1}, {2, -1}, {1, -2}, {-1, 2}, {-2, 1}};
+        while (!points.isEmpty()) {
             Point currentPoint = points.pollFirst();
-            matrixOfVisits[currentPoint.x-1][currentPoint.y-1] = 1;
+            matrixOfVisits[currentPoint.x - 1][currentPoint.y - 1] = 1;
             if (currentPoint.x == finishPoint.x && currentPoint.y == finishPoint.y) {
                 LinkedList<Point> way = new LinkedList<>();
                 Point p = currentPoint;
@@ -56,11 +55,11 @@ public class TaskD6HungryHorseAndBFS {
                 }
                 return;
             }
-            for (int i =0; i < movements.length; i++) {
+            for (int i = 0; i < movements.length; i++) {
                 Point tempPoint = new Point(currentPoint.x + movements[i][0], currentPoint.y + movements[i][1], currentPoint);
-                if (isCorrectCoords(tempPoint) && matrixOfVisits[tempPoint.x-1][tempPoint.y-1] == 0) {
+                if (isCorrectCoords(tempPoint) && matrixOfVisits[tempPoint.x - 1][tempPoint.y - 1] == 0) {
                     points.addLast(tempPoint);
-                    matrixOfVisits[tempPoint.x-1][tempPoint.y-1] = 1;
+                    matrixOfVisits[tempPoint.x - 1][tempPoint.y - 1] = 1;
                 }
             }
         }
@@ -73,10 +72,10 @@ public class TaskD6HungryHorseAndBFS {
         ArrayDeque<Point> pointArrayDeque = new ArrayDeque<>();
         String[] beginString = reader.readLine().split(" ");
         String[] endString = reader.readLine().split(" ");
-        Point beginPoint = new Point(Integer.parseInt(beginString[0]),Integer.parseInt(beginString[1]));
+        Point beginPoint = new Point(Integer.parseInt(beginString[0]), Integer.parseInt(beginString[1]));
         pointArrayDeque.add(beginPoint);
-        Point finishPoint = new Point(Integer.parseInt(endString[0]),Integer.parseInt(endString[1]));
-        bfs(pointArrayDeque,matrixOfVisits,finishPoint);
+        Point finishPoint = new Point(Integer.parseInt(endString[0]), Integer.parseInt(endString[1]));
+        bfs(pointArrayDeque, matrixOfVisits, finishPoint);
         System.out.println(result);
     }
 }

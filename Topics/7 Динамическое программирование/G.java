@@ -1,5 +1,3 @@
-//package Tink.less7;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -52,12 +50,12 @@ public class TaskG7StackAndDP {
         if (dp[i][j] == j - i + 1) {
             return;
         } else if (dp[i][j] == 0) {
-            result.append(brackets, i, j+1);
+            result.append(brackets, i, j + 1);
         } else if (parent[i][j] == -1) {
             result.append(arrayOfBrackets[i]);
             buildValidPSP(arrayOfBrackets, i + 1, j - 1);
             result.append(arrayOfBrackets[j]);
-        } else { 
+        } else {
             int k = parent[i][j];
             buildValidPSP(arrayOfBrackets, i, k);
             buildValidPSP(arrayOfBrackets, k + 1, j);

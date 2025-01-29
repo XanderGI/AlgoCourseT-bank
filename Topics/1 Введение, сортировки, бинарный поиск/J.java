@@ -1,11 +1,9 @@
-//package Tink.less1;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class TaskJ1prefSumAndBinSearch  {
+public class TaskJ1prefSumAndBinSearch {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder result = new StringBuilder();
     static String[] data;
@@ -23,13 +21,13 @@ public class TaskJ1prefSumAndBinSearch  {
     }
 
     static long upPart(int mid) {
-        long midM = (long)mid * m;
+        long midM = (long) mid * m;
         return midM * (midM + 1) / 2;
     }
 
     static long leftPart(int mid) {
-        long part1 = (long)n * (1 + mid) * mid / 2;
-        long part2 = (long)n * (n - 1) * m * mid / 2;
+        long part1 = (long) n * (1 + mid) * mid / 2;
+        long part2 = (long) n * (n - 1) * m * mid / 2;
         return part1 + part2;
     }
 
@@ -82,12 +80,12 @@ public class TaskJ1prefSumAndBinSearch  {
     }
 
     static long calcAllSum() {
-        return ((long)n * m + 1) * ((long)n * m) / 2;
+        return ((long) n * m + 1) * ((long) n * m) / 2;
     }
 
     public static void main(String[] args) throws IOException {
         int t = Integer.parseInt(br.readLine());
-        for (int i =0; i < t; i++) {
+        for (int i = 0; i < t; i++) {
             data = br.readLine().split(" ");
             n = Integer.parseInt(data[0]);
             m = Integer.parseInt(data[1]);
